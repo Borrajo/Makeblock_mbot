@@ -55,8 +55,10 @@
 		
 		/*	Prototipos de funciones para lo que es frontend
 			["tipo de funcion", "mensaje a mostrar %d.menus", "funcion a la que llama", "parametro1", "parametro2", "parametroX",
-			{"encode":"{tipo y numero de parametro1}{tipo y numero de parametro1"}",
-				"setup":"", "inc":"", "def": "como se define la funcion aun no entiendo",
+			{"encode":"{tipo y numero de parametro1}{tipo y numero de parametro1}",
+				"setup":"",
+				"inc":"",
+				"def": "como se define la funcion aun no entiendo",
 				"work":"como se implementa la funcion (llama al mbot.js)",
 				"loop":""
 			}
