@@ -92,7 +92,7 @@
 		{"encode":"{d0}{d1}","setup":"","inc":"","def":"MePort dc130({0});\n--separator--void dc130_run( uint8_t port, int8_t direction) \n{\n  pinMode(dc130.pin1(),OUTPUT);\n  pinMode(dc130.pin2(),OUTPUT);\n  if( direction > 0)\n  {\n    digitalWrite(dc130.pin2(),0);\n    digitalWrite(dc130.pin1(),1);\n  }\n  else if( direction < 0)\n  {\n    digitalWrite(dc130.pin1(),0);\n    digitalWrite(dc130.pin2(),1);\n  }\n  else\n  {\n    digitalWrite(dc130.pin1(),0);\n    digitalWrite(dc130.pin2(),0);\n  }\n}\n","work":"dc130_run({0},{1});\n","loop":""}],
 		
 		["-"],
-		["R", "read value from %d.blackPorts %d.slot", "getGas", "Port3", {"encode":"", "setup":"", "inc":"", "def":"MeGasSensor gasSensor_{0}({0});\n", "work":"gasSensor_{0}.readAnalog()", "loop":""}],
+		["R", "read value from %d.blackPorts %d.slot", "funtionName", "Port3", {"encode":"", "setup":"", "inc":"", "def":"MeGasSensor gasSensor_{0}({0});\n", "work":"gasSensor_{0}.readAnalog()", "loop":""}],
 		["R", "light sensor %d.laport","getLightSensor","light sensor on board",
 		{"encode":"{d0}","setup":"","inc":"","def":"MeLightSensor lightsensor_{0}({0});\n","work":"lightsensor_{0}.read()","loop":""}],
 		

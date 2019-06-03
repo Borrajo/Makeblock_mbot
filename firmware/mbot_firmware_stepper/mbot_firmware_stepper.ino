@@ -7,7 +7,7 @@
 * Description        : Firmware for Makeblock Electronic modules with Scratch.  
 * License            : CC-BY-SA 3.0
 * Copyright (C) 2013 - 2016 Maker Works Technology Co., Ltd. All right reserved.
-* Modification       : 19/08/20 for Manuel Borrajo
+* Modification       : 19/08/2018 for Manuel Borrajo
 * http://www.makeblock.cc/
 **************************************************************************/
 #include <Wire.h>
