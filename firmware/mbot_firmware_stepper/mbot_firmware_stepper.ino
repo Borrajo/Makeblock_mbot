@@ -103,6 +103,7 @@ uint8_t command_index = 0;
 #define COMPASS 26
 #define DIGITAL 30
 #define ANALOG 31
+#define ANALOG_READ 60
 #define PWM 32
 #define SERVO_PIN 33
 #define TONE 34
@@ -647,6 +648,24 @@ void readSensor(int device){
      }
      value = generalDevice.aRead2();
      sendFloat(value);
+   }
+   break;
+   case  ANALOG_READ:{
+	slot = readBuffer(7);
+    if(generalDevice.getPort()!=port || generalDevice.getSlot()!=slot){
+      generalDevice.reset(port,slot);
+      if( slot == SLOT1){
+        pinMode(generalDevice.pin1(),INPUT);
+      }else{
+        pinMode(generalDevice.pin2(),INPUT);
+      }
+    }
+    if( slot == SLOT1){
+      value = generalDevice.aRead1();
+    }else{
+      value = generalDevice.aRead2();
+    }
+    sendFloat(value);
    }
    break;
    case  JOYSTICK:{
